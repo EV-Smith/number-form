@@ -1,0 +1,62 @@
+html
+  {
+    width: 90%;
+    font-family: Oswald;
+  }
+
+body 
+  {
+    margin: 1rem 2rem;
+    padding: 1rem 3rem;
+    border: 1px solid #444444;
+  }
+
+h2
+  {
+    font-size: 2rem;
+    font-weight: 700; 
+  }
+
+h3
+  {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+input[type=submit] {
+    padding:.5rem 1rem;
+    margin: .5rem 0;
+    font-family: Oswald;
+    font-weight: 400;
+    font-size: 1rem;
+    background:#FF503B; 
+    color: #ffffff;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+
+input[type=submit]:hover {
+    background:#E82F1E; 
+    color: #ffffff;
+}
+
+button {
+    padding:.5rem 1rem; 
+    margin: 1rem 0 2rem 0;
+    font-family: Oswald;
+    font-weight: 400;
+    font-size: 1rem;
+    background:#adadad; 
+    color: #ffffff;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+
+button:hover {
+    background:#858585; 
+    color: #ffffff;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Number Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+  
+</head> 
+  <body>
+    
+        <form id="numbersForm" method="post" action="#">
+                  <h2>Type in a number.</h2>
+                  <p>
+                    <label>Number: </label>
+                    <input id="numberInput" type="number" name="number" placeholder="Please enter a number." pattern="^[0-9]*$" required>
+                  </p>
+        </form>
+                
+        <input type="submit" value="Calculate!" name="submit" onClick="showInput(); formValidation();">
+        
+        <div id="display">
+          <h3>Numbers Entered:</h3>
+          <h3>Sum:</h3> 
+          <h3>Average:</h3>
+        </div>
+        <button id="reset" name="reset">Reset Form</button>        
+         
+
+          <script type="text/javascript">
+            var numOf = 0;
+            var sum = 0;
+            var average = 0;
+            var results = document.getElementById('display');
+      
+              
+            function formValidation()
+            {
+              if (document.numbersForm.numberInput.value == "")
+                {
+                  document.numbersForm.numberInput.focus();
+                  return false;
+                }
+                return(true);
+            }
+            
+            
+            function showInput() {
+              var numEntered =  parseInt(document.getElementById("numberInput").value);
+              var output = "";
+
+              numOf += 1;
+              sum += numEntered;
+              average = sum/numOf;
+
+              output += '<h3>Numbers Entered: </h3>';
+              output += numOf;
+              output += '<h3>Sum: </h3>';
+              output += sum;
+              output += '<h3>Average: </h3>';
+              output += average;
+
+              results.innerHTML = output;
+            }
+              
+              var resetButton = document.getElementById("reset");
+                resetButton.addEventListener("click", reset, false);
+                function reset(evt) {
+
+                results.innerHTML = "<h3>Numbers Entered: </h3><h3>Sum: </h3><h3>Average: </h3>";
+                numOf = 0;
+                sum = 0;
+                average = 0;
+          }
+          
+      </script>
+  </body>
+  
+</html>
